@@ -45,7 +45,6 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {
         mf_login: "mf_login@http://localhost:8081/remoteEntry.js",
-        mf_loader: "mf_loader@http://localhost:8082/remoteEntry.js",
       },
       exposes: {},
       shared: {
