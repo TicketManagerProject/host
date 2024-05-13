@@ -11,7 +11,7 @@ const LogInPage = () => {
         padding: 0,
       }}
     >
-      <LogIn />;
+      <LogIn />
     </div>
   );
 };
