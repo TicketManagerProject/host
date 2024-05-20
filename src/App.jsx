@@ -1,36 +1,57 @@
+// App.js
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Loader from "./components/Loader";
+import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 
 const LogInPage = lazy(() => import("./pages/LogInPage"));
 const SignUpPage = lazy(() => import("./pages/SignUpPage"));
+const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
+const UserDashboard = lazy(() => import("./pages/UserDashboard"));
 
 const App = () => (
   <div className="app-background">
-<Router>
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Suspense fallback={<Loader />}>
-            <LogInPage />
-          </Suspense>
-        }
-      />
-      <Route
-        path="/signup"
-        element={
-          <Suspense fallback={<Loader />}>
-            <SignUpPage />
-          </Suspense>
-        }
-      />
-    </Routes>
-  </Router>
+    <Router>
+      <AuthProvider>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Loader />}>
+                <LogInPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <Suspense fallback={<Loader />}>
+                <SignUpPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <Suspense fallback={<Loader />}>
+                <AdminDashboard />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/user/dashboard"
+            element={
+              <Suspense fallback={<Loader />}>
+                <UserDashboard />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </AuthProvider>
+    </Router>
   </div>
-  
 );
 ReactDOM.createRoot(document.getElementById("app")).render(<App />);
