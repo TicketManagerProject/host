@@ -1,14 +1,10 @@
 /* Admin.css */
 .navbar-container {
-    width: 97%;
-    margin: auto;
-    padding-top: 0px;
+    margin-top: -60px;
+    width: 98%;
+    
 }
 
-.navbar {
-    background-color: #f8f9fa;
-    border-radius: 5px;
-}
 
 .navbar-nav .nav-link {
     color: #343a40;
@@ -23,15 +19,14 @@
 @media (max-width: 90%) {
     .navbar-container {
         width: 100%;
-        padding-top: 10px;
+        padding-top: 5px;
     }
 }
 
 .content{
     width: 80%;
     height: 660px;
-    
     padding: 3%;
     margin: auto;
-    margin-top: 1%;
+    
 }
