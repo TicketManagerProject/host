@@ -6,6 +6,7 @@ import Loader from "./components/Loader";
 import "./App.css";
 
 const LogInPage = lazy(() => import("./pages/LogInPage"));
+const SignUpPage = lazy(() => import("./pages/SignUpPage"));
 
 const App = () => (
   <div className="app-background">
@@ -16,6 +17,14 @@ const App = () => (
         element={
           <Suspense fallback={<Loader />}>
             <LogInPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <Suspense fallback={<Loader />}>
+            <SignUpPage />
           </Suspense>
         }
       />
