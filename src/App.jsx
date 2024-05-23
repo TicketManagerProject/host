@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Loader from "./components/Loader";
+import Layout from "./components/Layout";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 
@@ -11,10 +12,12 @@ const LogInPage = lazy(() => import("./pages/LogInPage"));
 const SignUpPage = lazy(() => import("./pages/SignUpPage"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const UserDashboard = lazy(() => import("./pages/UserDashboard"));
+const CreateTicketPage = lazy(() => import("./pages/Createpage"));
 
 const App = () => (
   <div className="app-background">
     <Router>
+      
       <AuthProvider>
         <Routes>
           <Route
@@ -49,8 +52,17 @@ const App = () => (
               </Suspense>
             }
           />
+          <Route
+            path="/user/dashboard/create"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CreateTicketPage />
+              </Suspense>
+            }
+          />
         </Routes>
       </AuthProvider>
+      
     </Router>
   </div>
 );

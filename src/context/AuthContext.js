@@ -1,4 +1,3 @@
-// src/context/AuthContext.js   gestionar el estado de autenticación en toda la aplicación
 import React, { createContext, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +18,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = () => {
         setUser(null);
-        navigate("/login");
+        navigate("/");
     };
 
     return (
@@ -30,4 +29,3 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
-
