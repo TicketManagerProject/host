@@ -55,26 +55,26 @@ const tableData = [
 ];
 
 const CreateTicketPage = () => {
-  const location = useLocation();
-  const role = location.pathname.split("/")[1];
+    const location = useLocation();
+    const role = location.pathname.split("/")[1];
 
-  return (
-    <div className="navbar-container">
-      <MyNavbar role={role} />
+    return (
+        <div className="navbar-container">
+            <MyNavbar role={role} />
 
-      <div className="content">
-        <div className="table-container">
-          <TicketTable
-            data={tableData}
-            columns={["id", "Ticket", "Date", "Time", "Outbuilding"]}
-          />
+            <div className="content">
+                <div className="table-container">
+                    <TicketTable
+                        data={tableData}
+                        columns={["id", "Ticket", "Date", "Time", "Outbuilding"]}
+                    />
+                </div>
+                <div className="ticket-create-container">
+                    <TicketCreate />
+                </div>
+            </div>
         </div>
-        <div className="ticket-create-container">
-          <TicketCreate />
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default CreateTicketPage;
