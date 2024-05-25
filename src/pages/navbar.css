@@ -1,19 +1,17 @@
 /* Admin.css */
 .navbar-container {
-    margin-top: -60px;
-    width: 98%;
-    
+  margin-top: -60px;
+  width: 98%;
 }
 
-
 .navbar-nav .nav-link {
-    color: #343a40;
-    font-weight: bold;
+  color: #343a40;
+  font-weight: bold;
 }
 
 .navbar-brand {
-    color: #343a40;
-    font-weight: bold;
+  color: #343a40;
+  font-weight: bold;
 }
 
 @media (max-width: 95%) {
@@ -29,3 +27,4 @@
     padding: 2%;
     margin: auto;
 }
+
