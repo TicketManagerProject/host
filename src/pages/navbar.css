@@ -16,7 +16,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 90%) {
+@media (max-width: 95%) {
     .navbar-container {
         width: 100%;
         padding-top: 5px;
@@ -24,9 +24,8 @@
 }
 
 .content{
-    width: 80%;
-    height: 660px;
-    padding: 3%;
+    width: 105%;
+    height: 655px;
+    padding: 2%;
     margin: auto;
-    
 }

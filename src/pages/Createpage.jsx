@@ -49,20 +49,6 @@ const tableData = [
         Date: "2023-03-23",
         Time: "11:00 AM",
         Outbuilding: "Building B",
-    },
-    {
-        id: 3,
-        Ticket: "ABC125",
-        Date: "2023-03-24",
-        Time: "12:00 PM",
-        Outbuilding: "Building C",
-    }, ,
-    {
-        id: 2,
-        Ticket: "ABC124",
-        Date: "2023-03-23",
-        Time: "11:00 AM",
-        Outbuilding: "Building B",
     }
 ];
 

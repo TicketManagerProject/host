@@ -5,7 +5,6 @@
     
 }
 
-
 .navbar-nav .nav-link {
     color: #343a40;
     font-weight: bold;
@@ -24,24 +23,24 @@
 }
 
 .content {
-    width: 80%;
-    height: 650px;
+    width: 95%;
+    height: 655px;
     margin: auto;
     display: flex;
+    justify-content: space-around;
 }
 
 .table-container {
-    margin-top: 2%;
     flex: 1;
-    height: 1220px;
-    width: 150%;
-    padding: 1%;
+    margin: auto;
+    width: 170%;
+    background-color: #ffffff;
+    height: 765px;
 }
 
 .ticket-create-container {
     flex: 1;
-    
     width: 20%;
     padding: 2%;
-    margin-top: -5%;
+    margin-top: -4%;
 }
