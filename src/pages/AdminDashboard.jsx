@@ -2,7 +2,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import MyNavbar from "mf_navbar/MyNavbar";
-import Table from "mf_tabletickets/Table";
+import TicketTable from "mf_ticket_table/TicketTable";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
             <MyNavbar role={role} />
 
             <div className="content">
-                <Table data={tableData} columns={["id", "Ticket", "Date", "Time", "Outbuilding"]} />
+                <TicketTable data={tableData} columns={["id", "Ticket", "Date", "Time", "Outbuilding"]} />
             </div>
         </div>
     );

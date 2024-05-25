@@ -47,9 +47,11 @@ module.exports = (_, argv) => ({
         mf_login: "mf_login@http://localhost:8081/remoteEntry.js",
         mf_signup: "mf_signup@http://localhost:8082/remoteEntry.js",
         mf_navbar: "mf_navbar@http://localhost:8083/remoteEntry.js",
-        mf_tabletickets: "mf_tabletickets@http://localhost:8084/remoteEntry.js",
-        mf_ticket_create: "mf_ticket_create@http://localhost:8085/remoteEntry.js",
-        mf_ticket_cancel: "mf_ticket_cancel@http://localhost:8086/remoteEntry.js"
+        mf_ticket_table: "mf_ticket_table@http://localhost:8084/remoteEntry.js",
+        mf_ticket_create:
+          "mf_ticket_create@http://localhost:8085/remoteEntry.js",
+        mf_ticket_cancel:
+          "mf_ticket_cancel@http://localhost:8086/remoteEntry.js",
       },
       exposes: {},
       shared: {

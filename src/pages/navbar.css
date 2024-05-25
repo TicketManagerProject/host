@@ -1,32 +1,29 @@
 /* Admin.css */
 .navbar-container {
-    margin-top: -60px;
-    width: 98%;
-    
+  margin-top: -60px;
+  width: 98%;
 }
 
-
 .navbar-nav .nav-link {
-    color: #343a40;
-    font-weight: bold;
+  color: #343a40;
+  font-weight: bold;
 }
 
 .navbar-brand {
-    color: #343a40;
-    font-weight: bold;
+  color: #343a40;
+  font-weight: bold;
 }
 
 @media (max-width: 90%) {
-    .navbar-container {
-        width: 100%;
-        padding-top: 5px;
-    }
+  .navbar-container {
+    width: 100%;
+    padding-top: 5px;
+  }
 }
 
-.content{
-    width: 80%;
-    height: 660px;
-    padding: 3%;
-    margin: auto;
-    
+.content {
+  width: 80%;
+  height: 660px;
+  padding: 3%;
+  margin: auto;
 }
