@@ -15,6 +15,7 @@ const UserDashboard = lazy(() => import("./pages/UserDashboard"));
 const CreateTicketPage = lazy(() => import("./pages/Createpage"));
 const CancelTicketPage = lazy(() => import("./pages/Cancelpage"));
 const ViewTicketPage = lazy(() => import("./pages/Viewpage"));
+const NotificationsPage = lazy(() => import("./pages/NotificationsPage"));
 
 const App = () => (
   <div className="app-background">
@@ -91,6 +92,14 @@ const App = () => (
             element={
               <Suspense fallback={<Loader />}>
                 <ViewTicketPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/user/dashboard/notifications"
+            element={
+              <Suspense fallback={<Loader />}>
+                <NotificationsPage />
               </Suspense>
             }
           />
