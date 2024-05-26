@@ -13,11 +13,13 @@ const SignUpPage = lazy(() => import("./pages/SignUpPage"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const UserDashboard = lazy(() => import("./pages/UserDashboard"));
 const CreateTicketPage = lazy(() => import("./pages/Createpage"));
+const CancelTicketPage = lazy(() => import("./pages/Cancelpage"));
+const ViewTicketPage = lazy(() => import("./pages/Viewpage"));
 
 const App = () => (
   <div className="app-background">
     <Router>
-      
+
       <AuthProvider>
         <Routes>
           <Route
@@ -60,9 +62,41 @@ const App = () => (
               </Suspense>
             }
           />
+          <Route
+            path="/admin/dashboard/create"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CreateTicketPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/user/dashboard/cancel"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CancelTicketPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/admin/dashboard/cancel"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CancelTicketPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/user/dashboard/view"
+            element={
+              <Suspense fallback={<Loader />}>
+                <ViewTicketPage />
+              </Suspense>
+            }
+          />
         </Routes>
       </AuthProvider>
-      
+
     </Router>
   </div>
 );
